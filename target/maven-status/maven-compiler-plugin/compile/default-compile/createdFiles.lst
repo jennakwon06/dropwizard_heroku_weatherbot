@@ -1,5 +1,6 @@
 com/example/helloworld/resources/FilteredResource.class
 com/example/helloworld/resources/HelloWorldResource.class
+com/example/helloworld/resources/WeatherResource.class
 com/example/helloworld/core/User.class
 com/example/helloworld/HelloWorldApplication$3.class
 com/example/helloworld/db/PersonDAO.class
