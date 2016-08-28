@@ -43,15 +43,15 @@ server:
     #  keyStorePassword: example
     #  validateCerts: false
     #  validatePeers: false
-  adminConnectors:
-    - type: http
-      port: 8081
-    - type: https
-      port: 8444
-      keyStorePath: example.keystore
-      keyStorePassword: example
-      validateCerts: false
-      validatePeers: false
+#  adminConnectors:
+#    - type: http
+#      port: 8081
+#    - type: https
+#      port: 8444
+#      keyStorePath: example.keystore
+#      keyStorePassword: example
+#      validateCerts: false
+#      validatePeers: false
 
 # Logging settings.
 logging:
