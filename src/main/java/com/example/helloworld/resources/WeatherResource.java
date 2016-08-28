@@ -20,7 +20,6 @@ public class WeatherResource {
 
     private final TemperatureDAO temperatureDAO;
 
-
     public WeatherResource(TemperatureDAO temperatureDAO) {
         this.temperatureDAO = temperatureDAO;
     }
