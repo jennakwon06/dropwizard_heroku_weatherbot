@@ -7,14 +7,10 @@ import com.example.helloworld.core.Person;
 import com.example.helloworld.core.Template;
 import com.example.helloworld.core.User;
 import com.example.helloworld.db.PersonDAO;
+import com.example.helloworld.db.TemperatureDAO;
 import com.example.helloworld.filter.DateRequiredFeature;
 import com.example.helloworld.health.TemplateHealthCheck;
-import com.example.helloworld.resources.FilteredResource;
-import com.example.helloworld.resources.HelloWorldResource;
-import com.example.helloworld.resources.PeopleResource;
-import com.example.helloworld.resources.PersonResource;
-import com.example.helloworld.resources.ProtectedResource;
-import com.example.helloworld.resources.ViewResource;
+import com.example.helloworld.resources.*;
 import com.example.helloworld.tasks.EchoTask;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
@@ -80,7 +76,8 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
 
     @Override
     public void run(HelloWorldConfiguration configuration, Environment environment) {
-        final PersonDAO dao = new PersonDAO(hibernateBundle.getSessionFactory());
+        final PersonDAO daoPerson = new PersonDAO(hibernateBundle.getSessionFactory());
+        final TemperatureDAO daoTemperature = new TemperatureDAO(hibernateBundle.getSessionFactory());
         final Template template = configuration.buildTemplate();
 
         environment.healthChecks().register("template", new TemplateHealthCheck(template));
@@ -94,10 +91,11 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         environment.jersey().register(new AuthValueFactoryProvider.Binder<>(User.class));
         environment.jersey().register(RolesAllowedDynamicFeature.class);
         environment.jersey().register(new HelloWorldResource(template));
+        environment.jersey().register(new WeatherResource(daoTemperature));
         environment.jersey().register(new ViewResource());
         environment.jersey().register(new ProtectedResource());
-        environment.jersey().register(new PeopleResource(dao));
-        environment.jersey().register(new PersonResource(dao));
+        environment.jersey().register(new PeopleResource(daoPerson));
+        environment.jersey().register(new PersonResource(daoPerson));
         environment.jersey().register(new FilteredResource());
     }
 }
