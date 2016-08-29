@@ -5,7 +5,7 @@
         <maven>3.0.0</maven>
     </prerequisites>
 
-    <artifactId>weatherbot</artifactId>
+    <artifactId>dropwizard-example</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <groupId>io.dropwizard</groupId>
     <name>WeatherBot Service</name>
