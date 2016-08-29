@@ -34,6 +34,6 @@ public class WeatherResource {
 //        return temperatureDAO.findAll();
 //    }
     public String getHardcodedMessage() {
-        return "It is " + r.nextInt(100 - 50) + 50 + " degrees right now!";
+        return "It is " + (r.nextInt(100 - 50) + 50) + " degrees right now!";
     }
 }
