@@ -8,7 +8,7 @@
     <artifactId>dropwizard-example</artifactId>
     <version>1.0.1-SNAPSHOT</version>
     <groupId>io.dropwizard</groupId>
-    <name>Dropwizard Example Application</name>
+    <name>WeatherBot Service</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -242,7 +242,7 @@
                     <transformers>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <mainClass>com.example.helloworld.HelloWorldApplication</mainClass>
+                            <mainClass>com.example.weatherbot.WeatherBotApplication</mainClass>
                         </transformer>
                     </transformers>
                 </configuration>
