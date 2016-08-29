@@ -48,5 +48,12 @@ To test the example application run the following commands.
 * To post data into the application.
 
 	curl -H "Content-Type: application/json" -X POST -d '{"fullName":"Other Person","jobTitle":"Other Title"}' http://localhost:8080/people
-	
+
+	curl -H "Content-Type: application/json" -X POST -d '{"areaCode":"11111","temperature":"90"}' http://localhost:8080/weather
+
+
 	open http://localhost:8080/people
+
+web: java $JAVA_OPTS -jar target/dropwizard-example-0.7.0.jar db migrate example.yml && java $JAVA_OPTS -Ddw.server.connector.port=$PORT -jar target/dropwizard-example-0.7.0.jar server example.yml
+
+web: java $JAVA_OPTS -jar target/dropwizard-example-1.0.1-SNAPSHOT.jar db migrate example.yml && java $JAVA_OPTS -Ddw.server.connector.port=$PORT -jar target/dropwizard-example-1.0.1-SNAPSHOT.jar server example.yml

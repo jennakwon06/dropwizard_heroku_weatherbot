@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.example.helloworld.resources.PeopleResourceTest
+Test set: com.example.weatherbot.resources.PeopleResourceTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.019 sec - in com.example.helloworld.resources.PeopleResourceTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.019 sec - in com.example.weatherbot.resources.PeopleResourceTest

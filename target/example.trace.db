@@ -1,6 +1,6 @@
 2016-08-27 21:36:30 jdbc[12]: exception
 org.h2.jdbc.JdbcSQLException: Table "PEOPLE" not found; SQL statement:
-/* com.example.helloworld.core.Person.findAll */ select person0_.id as id1_0_, person0_.fullName as fullName2_0_, person0_.jobTitle as jobTitle3_0_ from people person0_ [42102-192]
+/* com.example.weatherbot.core.Person.findAll */ select person0_.id as id1_0_, person0_.fullName as fullName2_0_, person0_.jobTitle as jobTitle3_0_ from people person0_ [42102-192]
 2016-08-27 21:36:57 jdbc[12]: exception
 org.h2.jdbc.JdbcSQLException: Table "PEOPLE" not found; SQL statement:
 select person0_.id as id1_0_0_, person0_.fullName as fullName2_0_0_, person0_.jobTitle as jobTitle3_0_0_ from people person0_ where person0_.id=? [42102-192]
@@ -15,7 +15,7 @@ org.h2.jdbc.JdbcSQLException: Table "PEOPLE" not found; SQL statement:
 select person0_.id as id1_0_0_, person0_.fullName as fullName2_0_0_, person0_.jobTitle as jobTitle3_0_0_ from people person0_ where person0_.id=? [42102-192]
 2016-08-27 21:44:55 jdbc[12]: exception
 org.h2.jdbc.JdbcSQLException: Table "PEOPLE" not found; SQL statement:
-/* com.example.helloworld.core.Person.findAll */ select person0_.id as id1_0_, person0_.fullName as fullName2_0_, person0_.jobTitle as jobTitle3_0_ from people person0_ [42102-192]
+/* com.example.weatherbot.core.Person.findAll */ select person0_.id as id1_0_, person0_.fullName as fullName2_0_, person0_.jobTitle as jobTitle3_0_ from people person0_ [42102-192]
 2016-08-27 21:45:47 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/JennaKwon/Dropbox/dropwizard-master/dropwizard-example/target/example.mv.db [1.4.192/7]" [50000-192]
 	at org.h2.message.DbException.get(DbException.java:168)
@@ -55,7 +55,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:85)
 	at io.dropwizard.cli.Cli.run(Cli.java:74)
 	at io.dropwizard.Application.run(Application.java:89)
-	at com.example.helloworld.HelloWorldApplication.main(HelloWorldApplication.java:38)
+	at com.example.weatherbot.WeatherBotApplication.main(HelloWorldApplication.java:38)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/JennaKwon/Dropbox/dropwizard-master/dropwizard-example/target/example.mv.db [1.4.192/7]" [50000-192]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 38 more
@@ -127,7 +127,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:85)
 	at io.dropwizard.cli.Cli.run(Cli.java:74)
 	at io.dropwizard.Application.run(Application.java:89)
-	at com.example.helloworld.HelloWorldApplication.main(HelloWorldApplication.java:38)
+	at com.example.weatherbot.WeatherBotApplication.main(HelloWorldApplication.java:38)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/JennaKwon/Dropbox/dropwizard-master/dropwizard-example/target/example.mv.db [1.4.192/7]" [50000-192]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 59 more
@@ -196,7 +196,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:85)
 	at io.dropwizard.cli.Cli.run(Cli.java:74)
 	at io.dropwizard.Application.run(Application.java:89)
-	at com.example.helloworld.HelloWorldApplication.main(HelloWorldApplication.java:38)
+	at com.example.weatherbot.WeatherBotApplication.main(HelloWorldApplication.java:38)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/JennaKwon/Dropbox/dropwizard-master/dropwizard-example/target/example.mv.db [1.4.192/7]" [50000-192]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 59 more
@@ -244,7 +244,7 @@ org.h2.message.DbException: General error: "java.lang.IllegalStateException: The
 	at io.dropwizard.cli.ConfiguredCommand.run(ConfiguredCommand.java:85)
 	at io.dropwizard.cli.Cli.run(Cli.java:74)
 	at io.dropwizard.Application.run(Application.java:89)
-	at com.example.helloworld.HelloWorldApplication.main(HelloWorldApplication.java:38)
+	at com.example.weatherbot.WeatherBotApplication.main(HelloWorldApplication.java:38)
 Caused by: org.h2.jdbc.JdbcSQLException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/JennaKwon/Dropbox/dropwizard-master/dropwizard-example/target/example.mv.db [1.4.192/7]" [50000-192]
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
 	... 38 more
