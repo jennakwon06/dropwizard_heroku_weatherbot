@@ -16,7 +16,7 @@ import java.io.IOException;
 public class IntegrationTest {
 
     private static final String TMP_FILE = createTempFile();
-    private static final String CONFIG_PATH = ResourceHelpers.resourceFilePath("test-example.yml");
+    private static final String CONFIG_PATH = ResourceHelpers.resourceFilePath("test-weatherbot.yml");
 
     @ClassRule
     public static final DropwizardAppRule<WeatherBotConfiguration> RULE = new DropwizardAppRule<>(
