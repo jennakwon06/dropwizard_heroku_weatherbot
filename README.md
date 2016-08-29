@@ -4,7 +4,7 @@ This is a project that demonstrates deploying a DropWizard project on Heroku.
 This project, through Dropwizard framework, handles a GET request to http://drift-slack-demo.herokuapp.com/weather by returning a hardcoded string. The resource class that handles this request is under src/main/java/com/example/weatherbot/resources/WeatherResource.java. 
 
 
-# Running This Application
+# Run This Application Locally
 
 First, cd into the directory you want to run this project in. Then, run the following commands. 
 
@@ -20,11 +20,14 @@ $ mvn clean install
 ```sh
 $ java -jar target/weatherbot-1.0.1-SNAPSHOT.jar server weatherbot.yml
 ```
+- Check http://localhost:8080/weather. port 8080 is specified in weatherbot.yml. 
 
-# Setting up heroku for your own project
+# Run This Application on Heroku 
 
-If you do not have an account, sign up for a free account. Then, install a Heroku Toolbelt for your OS. 
+You can see that this app is currently running on Heroku at http://drift-slack-demo.herokuapp.com/weather. 
+If you would like to run your Dropwizard project on Heroku as well, you must go through the below procedures.
 
+- Sign up for a free account if you don't have one already, and install Heroku Toolbelt. 
 - Log into your credentials
 ```sh
 $   heroku login
@@ -33,18 +36,19 @@ Email: example@example.com
 Password (typing will be hidden): 
 Authentication successful.
 ```
-cd into your Dropwizard project repo and create a new heroku project 
+- cd into your Dropwizard project repo and create a new heroku project 
 ```sh
 $ heroku create mydropwizardapp
 Creating example-app… done, stack is cedar
 http://mydropwizardapp.herokuapp.com/ | git@heroku.com:mydropwizardapp.git
 Git remote heroku added
 ```
-Allocate dyno resources & scale your web
+- Allocate dyno resources & scale your web
 ```sh
 $ git push heroku master
 $ heroku ps:scale web=1
 ```
+- Check your project at http://mydropwizardapp.herokuapp.com/ or at http://mydropwizardapp.herokuapp.com/*, where * are your Resources with @Path set in /src/main/java/com/pkgname/resources/*.java. You must register your resources under YourAppApplication.java (for example, see run method in /src/main/java/com/example/weatherbot/WeatherBotApplication.java
 
 
 # Notes for deployment on Heroku
