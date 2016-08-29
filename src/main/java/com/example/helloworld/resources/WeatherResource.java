@@ -11,7 +11,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import java.util.List;
 
 @Path("/weather")
 @Produces(MediaType.APPLICATION_JSON)
@@ -35,7 +34,7 @@ public class WeatherResource {
 //    public List<Temperature> listTemperature() {
 //        return temperatureDAO.findAll();
 //    }
-    public List<Temperature> listTemperature() {
+    public String returnTemperature() {
         return "It is 90 degrees right now!";
     }
 
