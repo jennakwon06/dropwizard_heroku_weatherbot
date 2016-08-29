@@ -9,10 +9,12 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.util.Random;
 
 @Path("/weather")
 @Produces(MediaType.APPLICATION_JSON)
 public class WeatherResource {
+    private Random r = new Random();
 
     private final TemperatureDAO temperatureDAO;
 
@@ -32,7 +34,6 @@ public class WeatherResource {
 //        return temperatureDAO.findAll();
 //    }
     public String getHardcodedMessage() {
-        return "It is 90 degrees right now!";
+        return "It is " + r.nextInt(100 - 50) + 50 + " degrees right now!";
     }
-
 }
