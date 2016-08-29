@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/dropwizard-example-1.0.1-SNAPSHOT.jar db migrate weatherbot.yml && java $JAVA_OPTS -Ddw.server.connector.port=$PORT -jar target/dropwizard-example-1.0.1-SNAPSHOT.jar server weatherbot.yml
+web: java $JAVA_OPTS -jar target/weatherbot-1.0.1-SNAPSHOT.jar db migrate weatherbot.yml && java $JAVA_OPTS -Ddw.server.connector.port=$PORT -jar target/weatherbot-1.0.1-SNAPSHOT.jar server weatherbot.yml
