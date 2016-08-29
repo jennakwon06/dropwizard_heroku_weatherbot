@@ -1,6 +1,6 @@
 # Introduction
 
-This is a bare bone project for creating a DropWizard project and deploying it on Heroku.
+This is a project that demonstrates deploying a DropWizard project on Heroku.
 This project handles a GET request to http://drift-slack-demo.herokuapp.com/weather by returning a hardcoded string.
 The resource class that handles this request is under src/main/java/com/example/weatherbot/resources/WeatherResource.java
 
