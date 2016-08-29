@@ -33,4 +33,5 @@ public class PeopleResource {
         return peopleDAO.findAll();
     }
 
+
 }

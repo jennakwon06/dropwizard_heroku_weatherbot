@@ -32,8 +32,11 @@ public class WeatherResource {
 
     @GET
     @UnitOfWork
+//    public List<Temperature> listTemperature() {
+//        return temperatureDAO.findAll();
+//    }
     public List<Temperature> listTemperature() {
-        return temperatureDAO.findAll();
+        return "It is 90 degrees right now!";
     }
 
 }
